@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:islamicapp/main.dart';
 import 'package:islamicapp/theme/themedata.dart';
 
@@ -12,6 +14,10 @@ class _TasbeehtabState extends State<Tasbeehtab> {
   List<String>tasbeh= ['الله اكبر','الحمدلله','سبحان الله'];
   String currentzikr ='';
 
+  @override
+  void initState() {
+    currentzikr = tasbeh[0];
+  }
   double turns = 0.0;
   void changerotation(){
 
@@ -24,10 +30,21 @@ class _TasbeehtabState extends State<Tasbeehtab> {
     return(Scaffold(
        body: Column(
          children: [
-           Center(child: AnimatedRotation( duration: Duration(seconds: 1),
-               turns: turns,
-               child: Image(image: AssetImage(getFullPath('body of seb7a.png'))))
+           SizedBox(
+             height: 50,
            ),
+           Stack(
+
+             children:[ Positioned(
+               child: Center(child: AnimatedRotation( duration: Duration(seconds: 1),
+                 turns: turns,
+                 child: Image(image: AssetImage(getFullPath('body of seb7a.png'))))
+                            ),
+               ),
+    Positioned(child:
+    Image(image: AssetImage(getFullPath('head of seb7a.png'))),right: 0,left: 20,bottom: 25,
+    ),
+          ],  ),
            Text('No. of tasbeh',
              style: TextStyle(fontSize: 25,fontWeight: FontWeight.w600, color: Colors.black),
            ),
@@ -62,6 +79,12 @@ changerotation();
 if(counter>33){
   counter = 0;
   Changezikr();
+}
+if(counter>33&& i>=2){
+  i = 0;
+  Changezikr();
+
+
 }
 
 
