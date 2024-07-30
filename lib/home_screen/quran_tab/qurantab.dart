@@ -26,8 +26,7 @@ class Qurantab extends StatelessWidget{
           color: MyThemedata.primaryLight,
         ),
         Text('Chapter Name',
-         style: TextStyle(fontSize: 25,
-         fontWeight: FontWeight.w600),),
+         style:Theme.of(context).textTheme.titleSmall,),
         Container(
           width: double.infinity,
           height: 2,
@@ -41,7 +40,7 @@ class Qurantab extends StatelessWidget{
                 arguments: ChapterDetailsArgs(Chaptertitle[index], index));
               },
               child: Text(Chaptertitle[index],
-                style: TextStyle(fontSize: 25),
+                style:Theme.of(context).textTheme.bodyLarge,
                 textAlign: TextAlign.center,
               ),
             );

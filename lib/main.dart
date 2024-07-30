@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamicapp/home_screen/hadeth_tab/Hadeth_details.dart';
 import 'package:islamicapp/home_screen/home_screen.dart';
 import 'package:islamicapp/home_screen/quran_tab/chapter_details.dart';
 import 'package:islamicapp/splash_screen/splash_screen.dart';
@@ -17,9 +18,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {SplashScreen.routeName:(_) => SplashScreen(),
       HomeScreen.routeName:(_)=>HomeScreen(),
-      ChapterDetails.routeName: (_)=>ChapterDetails()}
+      ChapterDetails.routeName: (_)=>ChapterDetails(),
+      hadethDetails.routeName:(context) => hadethDetails()}
     ,initialRoute: SplashScreen.routeName,
     theme:MyThemedata.lightTheme,
+      darkTheme: MyThemedata.DarkTheme,
+      themeMode: ThemeMode.dark,
     );
       // This trailing comma makes auto-formatting nicer for build methods.
   }
