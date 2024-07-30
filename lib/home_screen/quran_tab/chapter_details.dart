@@ -19,7 +19,7 @@ class _ChapterDetailsState extends State<ChapterDetails> {
      if(verses.isEmpty){readfileData(arg.index);}
      return Defaultbackground(body:
      Card(
-       color: Colors.white,
+
        elevation: 45,
         margin: EdgeInsets.symmetric(vertical: 30,
         horizontal: 30),

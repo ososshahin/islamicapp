@@ -30,8 +30,7 @@ class _HadethtabState extends State<Hadethtab> {
         color: MyThemedata.primaryLight,
       ),
       Text('Hadeth No.',
-        style: TextStyle(fontSize: 25,
-            fontWeight: FontWeight.w600),),
+        style: Theme.of(context).textTheme.titleSmall),
       Container(
         width: double.infinity,
         height: 2,

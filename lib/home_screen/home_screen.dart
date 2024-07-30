@@ -16,13 +16,14 @@ class HomeScreen extends StatefulWidget{
 
 class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
-
+  bool isDark = true;
   @override
   Widget build(BuildContext context) {
 
-    return Stack(children:[
+    return Stack(children:[ 
+      isDark? Image(image: AssetImage(getFullPath('homeDarkBackground.png'))):
       Image(image: AssetImage(getFullPath('bg3.png'))),
-      Scaffold(appBar: AppBar(title: Text('Islami'),),
+      Scaffold(appBar: AppBar(title: Text('Islami',style: Theme.of(context).textTheme.titleMedium,),),
       body: tabs[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: selectedIndex,
@@ -33,10 +34,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
         },
         items: [
-        NavBaritem('quran', 'quran.png',MyThemedata.primaryLight),
-          NavBaritem('hadeth', 'hadeth.png',MyThemedata.primaryLight),
-          NavBaritem('sebha', 'sebha.png',MyThemedata.primaryLight ),
-          NavBaritem('radio', 'radio.png',MyThemedata.primaryLight)
+        NavBaritem('quran', 'quran.png',Theme.of(context).primaryColor),
+          NavBaritem('hadeth', 'hadeth.png',Theme.of(context).primaryColor),
+          NavBaritem('sebha', 'sebha.png',Theme.of(context).primaryColor ),
+          NavBaritem('radio', 'radio.png',Theme.of(context).primaryColor)
       ],),)]);
   }
 

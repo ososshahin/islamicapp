@@ -13,7 +13,7 @@ class hadethDetails extends StatelessWidget{
     Hadeth hadeth = ModalRoute.of(context)?.settings.arguments as Hadeth;
     return Defaultbackground(body:
     Card(
-        color: Colors.white,
+
         elevation: 60,
         margin: EdgeInsets.symmetric(vertical: 30,
             horizontal: 30),
@@ -24,8 +24,7 @@ class hadethDetails extends StatelessWidget{
               child: SingleChildScrollView(
                 child: Text(
                      textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.black,
-                    fontSize: 25),
+                    style: Theme.of(context).textTheme.bodyMedium,
                     hadeth.Content),
               ),
             ),

@@ -22,6 +22,8 @@ class MyApp extends StatelessWidget {
       hadethDetails.routeName:(context) => hadethDetails()}
     ,initialRoute: SplashScreen.routeName,
     theme:MyThemedata.lightTheme,
+      darkTheme: MyThemedata.DarkTheme,
+      themeMode: ThemeMode.dark,
     );
       // This trailing comma makes auto-formatting nicer for build methods.
   }

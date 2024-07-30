@@ -9,7 +9,7 @@ class verseContent extends StatelessWidget{
    return Padding(
      padding: const EdgeInsets.symmetric(vertical: 8),
      child: Text('$content {${Index+1}}',
-     style: TextStyle(fontSize: 30),
+     style: Theme.of(context).textTheme.bodyMedium,
      textAlign: TextAlign.center, textDirection: TextDirection.rtl,),
    );
   }
