@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islamicapp/app_translation/app_translation.dart';
 import 'package:islamicapp/home_screen/hadeth_tab/hadeth_title.dart';
 
 import '../../main.dart';
@@ -29,7 +30,7 @@ class _HadethtabState extends State<Hadethtab> {
         height: 2,
         color: MyThemedata.primaryLight,
       ),
-      Text('Hadeth No.',
+      Text(appTranslations(context).hadethNum,
         style: Theme.of(context).textTheme.titleSmall),
       Container(
         width: double.infinity,

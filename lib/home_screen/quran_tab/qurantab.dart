@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:islamicapp/app_translation/app_translation.dart';
 import 'package:islamicapp/home_screen/quran_tab/chapter_details.dart';
 import 'package:islamicapp/main.dart';
 import 'package:islamicapp/theme/themedata.dart';
@@ -25,7 +26,7 @@ class Qurantab extends StatelessWidget{
           height: 2,
           color: MyThemedata.primaryLight,
         ),
-        Text('Chapter Name',
+        Text(appTranslations(context).chapterTitle,
          style:Theme.of(context).textTheme.titleSmall,),
         Container(
           width: double.infinity,

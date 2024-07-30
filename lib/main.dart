@@ -4,6 +4,7 @@ import 'package:islamicapp/home_screen/home_screen.dart';
 import 'package:islamicapp/home_screen/quran_tab/chapter_details.dart';
 import 'package:islamicapp/splash_screen/splash_screen.dart';
 import 'package:islamicapp/theme/themedata.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,6 +25,9 @@ class MyApp extends StatelessWidget {
     theme:MyThemedata.lightTheme,
       darkTheme: MyThemedata.DarkTheme,
       themeMode: ThemeMode.dark,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      locale: Locale('ar'),
     );
       // This trailing comma makes auto-formatting nicer for build methods.
   }
