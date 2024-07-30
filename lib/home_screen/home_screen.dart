@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamicapp/app_translation/app_translation.dart';
 import 'package:islamicapp/home_screen/hadeth_tab/hadethtab.dart';
 import 'package:islamicapp/home_screen/navigation_bar.dart';
 import 'package:islamicapp/home_screen/quran_tab/qurantab.dart';
@@ -34,10 +35,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
         },
         items: [
-        NavBaritem('quran', 'quran.png',Theme.of(context).primaryColor),
-          NavBaritem('hadeth', 'hadeth.png',Theme.of(context).primaryColor),
-          NavBaritem('sebha', 'sebha.png',Theme.of(context).primaryColor ),
-          NavBaritem('radio', 'radio.png',Theme.of(context).primaryColor)
+        NavBaritem(appTranslations(context).quranTab, 'quran.png',Theme.of(context).primaryColor),
+          NavBaritem(appTranslations(context).hadethTab, 'hadeth.png',Theme.of(context).primaryColor),
+          NavBaritem(appTranslations(context).tasbehTab, 'sebha.png',Theme.of(context).primaryColor ),
+          NavBaritem(appTranslations(context).radioTab, 'radio.png',Theme.of(context).primaryColor)
       ],),)]);
   }
 
