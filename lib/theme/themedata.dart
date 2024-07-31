@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyThemedata {
@@ -5,7 +6,9 @@ class MyThemedata {
   static final Color primaryDark = Color(0xff141A2E);
   static final Color secondaryDark = Color(0xffFACC1D);
 
+
   static final ThemeData lightTheme = ThemeData(
+      dividerColor: Colors.transparent,
     textTheme: TextTheme(
       titleMedium: TextStyle(fontSize: 30,fontFamily:'elmessiri',
           fontWeight: FontWeight.bold,color: Colors.black),
@@ -28,6 +31,7 @@ class MyThemedata {
         unselectedItemColor: Colors.white,
 
       ));static final ThemeData DarkTheme = ThemeData(
+    dividerColor: Colors.transparent,
       textTheme: TextTheme(
           titleMedium: TextStyle(fontSize: 30,fontFamily:'elmessiri',
           fontWeight: FontWeight.bold,color: Colors.white),
@@ -37,8 +41,7 @@ class MyThemedata {
           bodyLarge: TextStyle(fontSize: 25,fontFamily: 'Inter',color: Colors.white),
           bodyMedium: TextStyle(fontSize: 20,fontFamily: 'Inter',color: secondaryDark)
       ),
-      cardTheme: CardTheme(color: primaryDark,
-      surfaceTintColor: Colors.black),
+      cardColor: primaryDark,
       scaffoldBackgroundColor:(Colors.transparent),
       appBarTheme: AppBarTheme(iconTheme: IconThemeData(color: Colors.white),centerTitle: true,
           titleTextStyle: TextStyle(color: Colors.white,fontSize:30),

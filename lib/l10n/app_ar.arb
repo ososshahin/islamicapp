@@ -5,5 +5,11 @@
   "quranTab": "قرآن",
   "hadethTab": "حديث",
   "tasbehTab": "تسبيح",
-  "radioTab": "اذاعة"
+  "radioTab": "اذاعة",
+  "settingsTab": "الاعدادات" ,
+  "language": "اللغة",
+  "theme": "مظهر",
+  "light": "نهاري",
+  "dark": "ليلي" ,
+  "tasbehNumber": "عدد التسبيحات"
 }
