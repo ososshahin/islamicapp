@@ -5,5 +5,11 @@
   "quranTab": "Quran",
   "hadethTab": "Hadeth",
   "tasbehTab": "Tasbeh",
-  "radioTab": "Radio"
+  "radioTab": "Radio",
+  "settingsTab": "Settings",
+  "language": "Language",
+  "theme": "Theme",
+  "light": "Light",
+  "dark": "Dark",
+  "tasbehNumber": "No. of tasbeh"
 }

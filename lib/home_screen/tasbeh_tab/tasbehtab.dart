@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:islamicapp/app_translation/app_translation.dart';
 import 'package:islamicapp/main.dart';
 import 'package:islamicapp/theme/themedata.dart';
 
@@ -45,8 +46,8 @@ class _TasbeehtabState extends State<Tasbeehtab> {
     Image(image: AssetImage(getFullPath('head of seb7a.png'))),right: 0,left: 20,bottom: 25,
     ),
           ],  ),
-           Text('No. of tasbeh',
-             style: TextStyle(fontSize: 25,fontWeight: FontWeight.w600, color: Colors.black),
+           Text(appTranslations(context).tasbehNumber,
+             style: TextStyle(fontSize: 25,fontWeight: FontWeight.w600, color: Theme.of(context).colorScheme.secondary),
            ),
            SizedBox(height: 40,width: 40,),
            ButtonTheme( height: 81,minWidth: 69,
